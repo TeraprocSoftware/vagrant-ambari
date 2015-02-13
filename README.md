@@ -1,4 +1,4 @@
-# vagrant_ambari
+# vagrant-ambari
 Vagrant project to spin up a cluster of 6 virtual machines with HDP2.2 deployed.
 
 
