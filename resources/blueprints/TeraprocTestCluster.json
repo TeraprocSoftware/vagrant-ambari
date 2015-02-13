@@ -1,0 +1,44 @@
+{
+  "blueprint" : "hdp-teraproc-default",
+  "default_password" : "nagios",  
+  "host_groups" :[
+    {
+      "name" : "master_1", 
+      "hosts" : [         
+        {
+          "fqdn" : "node1"
+        }
+      ]
+    },
+    {
+      "name" : "master_2", 
+      "hosts" : [         
+        {
+          "fqdn" : "node2"
+        }
+      ]
+    },
+    {
+      "name" : "slave_2", 
+      "hosts" : [
+        {
+          "fqdn" : "node3"
+        }
+      ]
+    },
+    {
+      "name" : "slave_1", 
+      "hosts" : [
+        {
+          "fqdn" : "node4"
+        },
+        {
+          "fqdn" : "node5"
+        },
+        {
+          "fqdn" : "node6"
+        }
+      ]
+    }
+  ]
+}

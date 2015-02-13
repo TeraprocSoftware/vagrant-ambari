@@ -1,0 +1,122 @@
+{
+  "configurations": [
+    {
+      "nagios-env": {
+        "nagios_contact": "admin@teraproc.com"
+      }
+    }
+  ],
+  "host_groups": [
+    {
+      "name": "master_1",
+      "components": [
+        {
+          "name": "NAMENODE"
+        },
+        {
+          "name": "ZOOKEEPER_SERVER"
+        },
+        {
+          "name": "GANGLIA_MONITOR"
+        }
+      ],
+      "cardinality": "1"
+    },
+    {
+      "name": "master_2",
+      "components": [
+        {
+          "name": "SECONDARY_NAMENODE"
+        },
+        {
+          "name": "RESOURCEMANAGER"
+        },
+        {
+          "name": "HBASE_MASTER"
+        },
+        {
+          "name": "APP_TIMELINE_SERVER"
+        },
+        {
+          "name": "HISTORYSERVER"
+        },
+        {
+          "name": "ZOOKEEPER_SERVER"
+        },
+        {
+          "name": "NAGIOS_SERVER"
+        },
+        {
+          "name": "GANGLIA_SERVER"
+        },
+        {
+          "name": "GANGLIA_MONITOR"
+        }
+      ],
+      "cardinality": "1"
+    },
+    {
+      "name": "slave_1",
+      "components": [
+        {
+          "name": "HBASE_REGIONSERVER"
+        },
+        {
+          "name": "NODEMANAGER"
+        },
+        {
+          "name": "DATANODE"
+        },
+        {
+          "name": "GANGLIA_MONITOR"
+        }
+      ],
+      "cardinality": "4"
+    },
+    {
+      "name": "slave_2",
+      "components": [
+        {
+          "name": "HBASE_REGIONSERVER"
+        },
+        {
+          "name": "NODEMANAGER"
+        },
+        {
+          "name": "DATANODE"
+        },
+        {
+          "name": "GANGLIA_MONITOR"
+        },
+        {
+          "name": "ZOOKEEPER_CLIENT"
+        },
+        {
+          "name": "HBASE_CLIENT"
+        },
+        {
+          "name": "HDFS_CLIENT"
+        },
+        {
+          "name": "YARN_CLIENT"
+        },
+        {
+          "name": "SLIDER"
+        },		
+        {
+          "name": "MAPREDUCE2_CLIENT"
+        },
+        {
+          "name": "GANGLIA_MONITOR"
+        }
+      ],
+      "cardinality": "1"
+    }	
+  ],
+  "Blueprints": {
+    "blueprint_name": "hdp-teraproc-default",
+    "stack_name": "HDP",
+    "stack_version": "2.2"
+  }
+}
+
